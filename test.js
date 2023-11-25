@@ -24,5 +24,24 @@
 // const fun = (n1, n2) => n1+n2
 // console.log(fun(1,5))
 
-const fun = (n1, n2) => (n1+n2)
-console.log(fun(2,5))
+// const fun = (n1, n2) => (n1+n2)
+// console.log(fun(2,5))
+
+// To return an object we must have to use paranthesis operators()
+
+// const [fun,sum] = (n1, n2) => (n1+n2, {username:'anant'})
+// const [sum, obj] = (n1, n2) => [(n1 + n2), { username: 'anant' }];
+const [sum, obj] = ((n1, n2) => [(n1 + n2), { username: 'anant' }])(5, 7);
+console.log(sum, obj);
+
+// console.log(sum(1, 3), obj())
+
+
+// (function chai() {
+//     console.log('named iife')
+// })();
+
+// ( (n1, n2) => {
+//     console.log('unnamed arrow iife')
+//     console.log(n1, n2)
+// })()
